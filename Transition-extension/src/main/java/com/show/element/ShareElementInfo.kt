@@ -10,6 +10,7 @@ import android.widget.Button
 import android.widget.TextView
 import androidx.cardview.widget.CardView
 import com.google.android.material.button.MaterialButton
+import com.google.android.material.imageview.ShapeableImageView
 import kotlinx.parcelize.Parcelize
 
 @Parcelize
@@ -33,12 +34,16 @@ class ShareElementInfo(
             if (view is TextView) {
                 textColor = view.currentTextColor
             }
-            var radius: Float? = null
-            if (view is CardView) {
-                radius = view.radius
-            } else if (view is MaterialButton) {
-                radius = view.cornerRadius.toFloat()
+            var radius: Float? = when (view) {
+                is CardView -> view.radius
+                is MaterialButton -> view.cornerRadius.toFloat()
+                is RadiusImageView -> view.radius.toFloat()
+                is RoundImageView -> view.radius.toFloat()
+
+                else -> null
             }
+
+
             return ShareElementInfo(snapShot, color, textColor, radius, view?.backgroundTintList)
         }
     }

@@ -6,12 +6,10 @@
 	<changeClipBounds  android:interpolator="@android:interpolator/accelerate_decelerate" />
 	<changeTransform  android:interpolator="@android:interpolator/linear"/>
 
-	<changeBounds
-		android:interpolator="@android:interpolator/accelerate_decelerate">
-	</changeBounds>
 
-	<transition class="com.show.element.transition.Recolor"/>
+	<changeBounds android:interpolator="@android:interpolator/accelerate_decelerate"/>
+
+<!--	<transition class="com.show.element.transition.Recolor"/>-->
 	<transition class="com.show.element.transition.ReRadius"/>
-
 
 </transitionSet>

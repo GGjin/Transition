@@ -19,11 +19,9 @@ class MainActivity : AppCompatActivity() {
         setExtraShareElementCallBack()
 
         binding.btn.setOnClickListener {
-            val transitionActivityOptions =
-                    ActivityOptions.makeSceneTransitionAnimation(this, Pair(binding.btn,"button"))
-            startActivity(Intent(this,MainActivity2::class.java), transitionActivityOptions.toBundle())
+            val transitionActivityOptions = ActivityOptions.makeSceneTransitionAnimation(this, Pair(binding.btn, "button"))
+            startActivity(Intent(this, MainActivity2::class.java), transitionActivityOptions.toBundle())
         }
-
 
 
     }

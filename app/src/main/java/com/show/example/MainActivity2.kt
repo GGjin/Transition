@@ -2,6 +2,7 @@ package com.show.example
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import com.show.element.transition.callback.setExtraShareElementCallBack
 
 class MainActivity2 : AppCompatActivity() {
@@ -13,12 +14,12 @@ class MainActivity2 : AppCompatActivity() {
 
         setExtraShareElementCallBack()
 
-        val fragment = MyFragment()
 
-        supportFragmentManager
-            .beginTransaction()
-            .add(R.id.frame,fragment,fragment::class.java.name)
-            .commitAllowingStateLoss()
+        findViewById<View>(R.id.btn2).setOnClickListener {
+            finishAfterTransition()
+        }
 
     }
+
+
 }

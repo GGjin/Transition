@@ -1,16 +1,51 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <com.show.element.RoundImageView
+        android:id="@+id/btn2"
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:layout_alignParentTop="true"
+        android:background="@color/purple_500"
+        android:scaleType="centerCrop"
+        android:src="@drawable/test"
+        android:transitionName="button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:radius="0dp" />
 
-  <FrameLayout
-      android:id="@+id/frame"
-      android:layout_width="match_parent"
-      android:layout_height="match_parent"/>
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="44dp"
+        android:layout_height="44dp"
+        android:layout_margin="20dp"
+        android:src="@drawable/ic_baseline_close_24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
+    <!--        <com.show.element.RadiusImageView-->
+    <!--            android:id="@+id/btn2"-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="350dp"-->
+    <!--            android:layout_alignParentTop="true"-->
+    <!--            android:background="@color/purple_500"-->
+    <!--            android:scaleType="centerCrop"-->
+    <!--            android:src="@drawable/test"-->
+    <!--            android:transitionName="button"-->
+    <!--            app:radius="0dp" />-->
 
-</RelativeLayout>
+    <!--        <androidx.appcompat.widget.AppCompatImageView-->
+    <!--            android:id="@+id/btn2"-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="350dp"-->
+    <!--            android:layout_alignParentTop="true"-->
+    <!--            android:background="@color/purple_500"-->
+    <!--            android:scaleType="centerCrop"-->
+    <!--            android:src="@drawable/test"-->
+    <!--            android:transitionName="button" />-->
+</androidx.constraintlayout.widget.ConstraintLayout>
